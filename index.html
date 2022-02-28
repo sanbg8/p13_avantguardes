@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <title>p13_dada</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+        --montserrat:'Montserrat', sans-serif;
+        }
+        h1{
+        font-family:'Montserrat', sans-serif;
+        color: white;
+        font-size: 8rem;
+        z-index:15;
+        display: flex;
+        align-content: flex-end;
+        align-items: center;
+        }
+        h2{
+        font-family:'Montserrat', sans-serif;
+        color: white;
+        font-size: 3rem;
+        }
+        
+        img{
+            width: 100%;
+            height: auto;
+        }
+        body{
+            background-color: black;
+
+        }
+        header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50vh;  
+
+        }
+        .welcome-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50vh;  
+        }
+        a{
+        text-decoration: none;
+        }
+        .zoom {
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        transition: transform .2s; /* Animation */
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        }
+        .zoom:hover {
+        transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+        #ulleres{
+        display: flex;
+        position:absolute;
+        align-items: center;
+        justify-content: center;
+        margin:all;
+        z-index:10;
+        width: 50%;
+        height: auto;
+        float: right;
+        }
+        #dins{
+        display: flex;
+        position:absolute;
+        align-items: center;
+        justify-content: center;
+        margin:all;
+        z-index:10;
+        width: 50%;
+        height: auto;
+        float: right;
+        }
+        .container{
+            width: 940px;
+            overflow: auto;
+            margin: 120px auto;
+            align-items: center;
+        }
+        .on{
+            position: absolute;
+            padding: auto;
+            z-index: 10;
+        }
+        .off{
+            z-index: 10;
+            margin: auto;
+            display: flex;
+            position: relative;
+            padding: auto;
+        }
+        .caixa{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .transition{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            mix-blend-mode: screen;
+            z-index: 1 ;
+            width: 500px ;
+            height: auto;
+            transition: opacity 4s;
+            filter: none;
+        }
+        .caixa .transition:hover{
+            filter:grayscale(); 
+            opacity: 4s;
+        }
+        .footer-section {
+        display: flex;
+        flex-direction: column;
+        justify-content:end;
+        text-align:end;
+        width: 100%;
+        height: 57vh;
+      
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        //$(".btn2").hide();
+        //$("#btn1").hide();
+        //$("p").hide();
+
+        /*$(".btn2").click(function(){
+            $(this).hide();
+        });*/  
+        //$("img").hide();
+       
+       
+        $("#on") .hide();
+        $("#ulleres").click (function(){
+            $("#on") .show();
+            });
+        $("#on").click (function(){
+            $("#on") .hide();
+            $("#ulleres") .show();
+        
+        });
+       
+     
+     });
+
+    </script>
+</head>
+<body>
+    <header> 
+        <div class="zoom">
+            <a href="img/rodchenko.jpg"><h1>бизнес</h1></a>
+        </div>
+        <div class="container"> 
+        </div>
+    </div>
+    <section id="welcome-section" class="welcome-section">
+        <div id="dins">
+            <img id="ulleres" src="img/ulleres.png" alt="ulleres">
+        <div class="caixa">
+        <div class= "transition">
+            
+            <img id="on" src="img/boton-on.jpg" alt="on">
+        </div> 
+    </section> 
+    </header>   
+    <section id="footer" class="footer-section">
+        <div class="zoom">
+          <a href="https://www.mutualart.com/Artist/Aleksandr-Mikhaylovich-Rodchenko/267FF8D15B665260"><h2>19 - госиздат - 29 </h2></a>
+        </div>
+    </section> 
+</body>
+</html>
